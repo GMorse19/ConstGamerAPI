@@ -1,42 +1,74 @@
-My Own Content
-# rails-api-template
+# Const Gamer: A Place to Play Games
 
-A template for starting projects with `rails-api`. Includes authentication.
+Const Gamer is a web application created for hosting multiple types of games. The client side of the application was built using [React.js](https://reactjs.org)
+and the back-end was built using [Ruby on Rails](https://rubyonrails.org)
+.
 
-At the beginning of each cohort, update the versions in [`Gemfile`](Gemfile).
+### Game Board View
+![GameImage](Board.png)
 
-## Prerequisites
+### Game List View
+![Image](GamePage.png)
 
--   [rails-api-examples-walkthrough](https://git.generalassemb.ly/ga-wdi-boston/rails-api-examples-walkthrough)
+## Important Links
 
-## Dependencies
+[Const Gamer Client Repo](https://github.com/GMorse19/project4-client)
 
-Install with `bundle install`.
+[Const Gamer Deployed API](https://gentle-beach-45706.herokuapp.com/)
 
--   [`rails-api`](https://github.com/rails-api/rails-api)
--   [`rails`](https://github.com/rails/rails)
--   [`active_model_serializers`](https://github.com/rails-api/active_model_serializers)
--   [`ruby`](https://www.ruby-lang.org/en/)
--   [`postgres`](http://www.postgresql.org)
+[Const Gamer Deployed Client](https://gmorse19.github.io/project4-client/)
+
+## Planning
+
+I began this API with just one resource other than user. I wanted to make sure I had things up and running before expanding with multiple resources. I plan to add a number of new resources over time with each game that I add to the [Const Gamer](https://gmorse19.github.io/project4-client/) app.
+
+One goal of mine for this API was to create a username column for the user resource. I was able to successfully complete that.
+
+## Unsolved Problems
+
+As of now, everything seems to be working as planned. I would like to explore more complicated relationships between future resources.
+
+## User Stories
+
+#### Version 1
+- As a user I would like to sign-up and sign-in - as a registered user with a username
+- As a user I would like to choose a game to play
+- As a user I would like to choose a challenge for the previously selected game
+- As a user I would like to create a challenge for others to play
+- As a user I would like the ability to delete a challenge that I’ve created
+- As a user I would like the ability to update a challenge that I’ve created
+- As a user I would like to view all challenges that others have created as well as my own
+- As a user I would like the ability to change my password
+- As a user I would like to sign-out
+
+#### Version 2
+
+- As a user I would like to count wins and losses
+- As a user I would like to rate a game and/or a challenge
+- As a user I would like to create a group of challenges to played against a timer
+- As a user I would like to select a random puzzle
+- As a user I would like to search by category
+
+#### Version 1 ERD
+
+![Image](ERD2.png)
+
+## Catalog of Routes
+
+| Verb  | URI Pattern     |
+|-------|-----------------|
+| GET   | /games          |
+| GET   | /auth-games     |
+| SHOW  | /games/:id      |
+| SHOW  | /auth-games/:id |
+| POST  | /create-game    |
+| PATCH | /games/:id/edit |
+
 
 ## Installation
 
-### Download Template:
-1.  [Download](../../archive/master.zip) this template.
-1.  Unzip and rename the template directory (`unzip ~/Downloads/rails-api-template-master.zip`)
-1.  Move into the new project and `git init`.
-
-### Customize Template:
-1.  Empty [`README.md`](README.md) and fill with your own content.
-1.  Rename your app module in `config/application.rb` (change
-    `RailsApiTemplate`).
-1.  Rename your project database in `config/database.yml` (change
-    `'rails-api-template'`).
-
-### Setup Environment:
+1. Fork and Clone this repository.
 1.  Install dependencies with `bundle install`.
-1.  `git add` and `git commit` your changes.
-1.  Create a `.env` for sensitive settings (`touch .env`).
 1.  Generate new `development` and `test` secrets (`bundle exec rails secret`).
 1.  Store them in `.env` with keys `SECRET_KEY_BASE_<DEVELOPMENT|TEST>`
     respectively.
@@ -44,7 +76,6 @@ Install with `bundle install`.
     `SECRET_KEY_BASE` in the environment of the production API (for example, using `heroku config:set` or the Heroku dashboard).
 1.  In order to make requests from your deployed client application, you will
     need to set `CLIENT_ORIGIN` in the environment of the production API (for example, `heroku config:set CLIENT_ORIGIN=https://<github-username>.github.io`).
-    See more about deploying to heroku [rails-heroku-setup-guide](https://git.generalassemb.ly/ga-wdi-boston/rails-heroku-setup-guide)
 
 ### Setup your database:
     - bin/rails db:drop (if it already exists)
@@ -56,19 +87,9 @@ Install with `bundle install`.
   **Note**: Do this for each database you want to set up. Your local database and production (Heroku) database will both need to be set up in this way!
 
 
-### Run your server!
+### Run your server
 1. Run the API server with `bin/rails server` or `bundle exec rails server`.
 
-## Structure
-
-This template follows the standard [project structure](https://gist.git.generalassemb.ly/danman01/64472678e25552412050c237ced48964) in Rails.
-
-`curl` command scripts are stored in [`curl-scripts`](curl-scripts) with names that
-correspond to API actions.
-
-User authentication is built-in.
-
-Tests (also called specs) are located in the `spec` folder.
 
 ## Tasks
 
@@ -244,7 +265,6 @@ To run this command (and others like this) on Heroku, just append `heroku run` b
 
 
 ## Additional Resources
-- [rails-heroku-setup-guide](https://git.generalassemb.ly/ga-wdi-boston/rails-heroku-setup-guide)
 - [Rails Guides: API-only app](http://guides.rubyonrails.org/api_app.html)
 - [Building a JSON API with Rails 5](https://blog.codeship.com/building-a-json-api-with-rails-5/)
 
