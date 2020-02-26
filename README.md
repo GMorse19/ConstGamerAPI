@@ -12,11 +12,11 @@ and the back-end was built using [Ruby on Rails](https://rubyonrails.org)
 
 ## Important Links
 
-[Const Gamer Client Repo](https://github.com/GMorse19/project4-client)
+[Const Gamer Client Repo](https://github.com/GMorse19/ConstGamer)
 
 [Const Gamer Deployed API](https://gentle-beach-45706.herokuapp.com/)
 
-[Const Gamer Deployed Client](https://gmorse19.github.io/project4-client/)
+[Const Gamer Deployed Client](https://gmorse19.github.io/ConstGamer/)
 
 ## Planning
 
