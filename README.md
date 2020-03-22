@@ -20,7 +20,7 @@ and the back-end was built using [Ruby on Rails](https://rubyonrails.org)
 
 ## Planning
 
-I began this API with just one resource other than user. I wanted to make sure I had things up and running before expanding with multiple resources. I plan to add a number of new resources over time with each game that I add to the [Const Gamer](https://gmorse19.github.io/project4-client/) app.
+I began this API with just one resource other than user. I wanted to make sure I had things up and running before expanding with multiple resources. I plan to add a number of new resources over time with each game that I add to the [Const Gamer](https://gmorse19.github.io/ConstGamer/) app.
 
 One goal of mine for this API was to create a username column for the user resource. I was able to successfully complete that.
 
